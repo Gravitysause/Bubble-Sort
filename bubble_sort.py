@@ -142,7 +142,7 @@ def test_sort(tests):
     -------
     None
     """
-    
+
     for test in range(tests):
         list = []
         length = randint(1, 25)
@@ -150,7 +150,6 @@ def test_sort(tests):
         for index in range(length):
             list.append(randint(1, 10000))
 
-        #print(f"The unordered list {list}")
         print(f"test {test + 1}")
         print(f"unordered list: {list}")
         print(f"ordered list: {bubble_sort(list)}")
