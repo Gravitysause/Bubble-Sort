@@ -2,6 +2,8 @@
 ## Bubble Sort Algorythm ##
 ###########################
 
+from random import randint
+
 
 def get_input():
     length = int(input("Amount of Numbers: "))
@@ -98,12 +100,21 @@ def bubble_sort(num_list):
 
         sorted = in_order(num_list)
 
-        print(num_list)
-
     return num_list
+    
+
+def test_sort(tests):
+    for test in range(tests):
+        list = []
+        length = randint(1, 100)
+
+        for index in range(length):
+            list.append(randint(1, 10000))
+
+        #print(f"The unordered list {list}")
+        print(f"test {test + 1}")
+        print(f"unordered list: {list}")
+        print(f"ordered list: {bubble_sort(list)}")
 
 
-unordered_list = get_input()
-
-print(f"The unordered list {unordered_list}")
-print(f"The ordered list {bubble_sort(unordered_list)}")
+test_sort(100)
