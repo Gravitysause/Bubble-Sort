@@ -6,6 +6,18 @@ from random import randint
 
 
 def get_input():
+    """
+    1. Takes in user input for how long the list will be.
+    2. Takes in numbers and adds them to the num_list
+
+    Note that because this method isn't currently being used because \n
+    the test_sort() method does the same thing.
+
+    Returns
+    -------
+    num_list
+        The list of numbers
+    """
     length = int(input("Amount of Numbers: "))
     num_list = []
 
@@ -89,6 +101,20 @@ def in_order(num_list):
 
 
 def bubble_sort(num_list):
+    """
+    Loops through all assets of the list and sorts them using a bubble sorting alogithm.
+
+    Parameters
+    ----------
+    num_list : list
+        The list of numbers that will be sorted
+
+    Returns
+    -------
+    num_list
+        num_list but it's been sorted
+    """
+
     sorted = False
 
     while not sorted:
@@ -104,9 +130,22 @@ def bubble_sort(num_list):
     
 
 def test_sort(tests):
+    """
+    Creates all the necessary data to simulate the program without user input.
+
+    Parameters
+    ----------
+    tests : int
+        The number of times the bubble sort will run
+
+    Returns 
+    -------
+    None
+    """
+    
     for test in range(tests):
         list = []
-        length = randint(1, 100)
+        length = randint(1, 25)
 
         for index in range(length):
             list.append(randint(1, 10000))
