@@ -1,5 +1,5 @@
 from bubble_sort import bubble_sort
-from bogo_sort import bogo_sort
+from bogo_sort import bogo_sort, bogo_sort_recurrsive
 
 from random import randint
 
@@ -54,4 +54,4 @@ print("Bubble Sort Tests:")
 test_sort(bubble_sort, 100, 100)
 
 print("\nBogo Sort Tests:")
-test_sort(bogo_sort, 1, 500)
+test_sort(bogo_sort_recurrsive, 1, 5)
